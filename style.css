@@ -1,0 +1,48 @@
+/* Colour styles */
+:root {
+  --mustard: #ffdb58;
+  --greyblue: #b8d8d8;
+  --cadetgrey: #7a9e9f;
+  --paynegrey: #4f6367;
+  --bittersweet: #fe5f55;
+}
+
+/* Whole Document */
+* {
+  font-family: "Tsukimi Rounded", sans-serif;
+  color: white;
+  /* display: flex; */
+}
+::selection {
+  background-color: var(--mustard);
+  color: black;
+}
+
+/* Elements */
+header {
+  background-color: var(--paynegrey);
+}
+nav {
+  background-color: var(--mustard);
+  color: black;
+}
+main {
+  background-color: var(--cadetgrey);
+}
+section {
+  background-color: var(--greyblue);
+}
+footer {
+  background-color: var(--bittersweet);
+}
+
+/* Conditions */
+nav > ::selection {
+  background-color: var(--bittersweet);
+  color: white;
+}
+
+/* Class */
+.flex {
+  display: flex;
+}
