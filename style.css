@@ -1,3 +1,6 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+
 /* Colour styles */
 :root {
   --mustard: #ffdb58;
@@ -9,9 +12,12 @@
 
 /* Whole Document */
 * {
-  font-family: "Tsukimi Rounded", sans-serif;
+  font-family: "Inter", sans-serif;
   color: white;
   /* display: flex; */
+}
+body {
+  margin: 0;
 }
 ::selection {
   background-color: var(--mustard);
@@ -24,6 +30,10 @@ header {
 }
 nav {
   background-color: var(--mustard);
+  color: black;
+}
+nav a {
+  text-decoration: none;
   color: black;
 }
 main {
@@ -41,8 +51,12 @@ nav > ::selection {
   background-color: var(--bittersweet);
   color: white;
 }
+a:hover {
+  background-color: var(--greyblue);
+}
 
 /* Class */
 .flex {
   display: flex;
+  padding: 16px;
 }
