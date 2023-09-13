@@ -4,31 +4,156 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Melvin Osei</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
     <header>
-      <img src="" alt="" />
-      <h1>Melvin Osei</h1>
+      <img
+        src="./images/Melvin-Logo.png"
+        id="logo_white"
+        alt="Melvin's logo"
+        height="96"
+        width="auto"
+      />
+      <hgroup>
+        <h1>Melvin Osei</h1>
+        <h2>User Interface Designer</h2>
+      </hgroup>
     </header>
     <nav>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact Me</a>
+      <menu>
+        <li>
+          <a href="./index.html">
+            <img
+              src="./images/Melvin-Logo.png"
+              title="Home"
+              id="logo"
+              alt="About"
+              height="32"
+              width="auto"
+            />
+          </a>
+        </li>
+        <li><a href="./projects.html" title="My Projects">My Projects</a></li>
+        <li><a href="#contact" title="Contact Me">Contact Me</a></li> </menu
+      ><menu>
+        <li>
+          <a
+            href="https://www.linkedin.com/in/melvin-osei/"
+            target="_blank"
+            title="LinkedIn"
+            ><img src="" alt="LinkedIn"
+          /></a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/TailsMelv025/JustIT_Bootcamp_GLA4_Cohort4"
+            target="_blank"
+            title="GitHub"
+            ><img src="" alt="GitHub"
+          /></a>
+        </li>
+      </menu>
     </nav>
     <main>
-      Body of text seen when you load onto the page
-      <h2>This is Melvin Osei</h2>
-      <h3>User Interface Designer</h3>
-      <p>
-        About Me: A versatile, dynamic, and approachable individual, with a
-        passion for science, technology, design, gaming, and animation. I keep a
-        positive and professional demeanour and am always eager to invent and
-        innovate. I am committed to continuous learning, personal development,
-        and acquiring new skills to excel both personally and professionally.
-      </p>
+      <section id="about" class="container">
+        <div id="who_is">
+          <a
+            href="./documents/MelvinOsei_CV.pdf"
+            download="MelvinOsei_CV.pdf"
+            title="Download CV"
+          >
+            <figure id="photo_Melvin_container" class="img-container circle">
+              <img
+                src="./images/MelvinA.png"
+                alt="Melvin in a blue shirt"
+                id="photo_Melvin"
+                height="256"
+                width="auto"
+              />
+              <figcaption>Click to Download <br />Melvin's CV</figcaption>
+            </figure></a
+          >
+          <h2>Who is <strong>Melvin Osei</strong>?</h2>
+          <p>
+            A versatile, dynamic, and approachable individual, with a passion
+            for science, technology, design, gaming, and animation. <br />
+            I keep a positive and professional demeanour and am always eager to
+            invent and innovate. <br />
+            I am committed to continuous learning, personal development, and
+            acquiring new skills to excel both personally and professionally.
+          </p>
+        </div>
+        <div id="skills">
+          <h3>Skills</h3>
+          <ul>
+            <li>UI/UX</li>
+            <li>Graphic Design</li>
+            <li>Figma</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+            <li>Spreadsheets</li>
+          </ul>
+        </div>
+        <div id="qualifications">
+          <h3>Qualifications</h3>
+        </div>
+      </section>
+      <section id="contact" class="container">
+        <h2>Contact</h2>
+        <form
+          id="contact_form"
+          action="mailto:melvinoosei@gmail.com"
+          method="post"
+          enctype="text/plain"
+        >
+          <div id="contact_name">
+            <label for="name">Your Name:</label>
+            <input name="name" title="Name" placeholder="Enter full name" />
+          </div>
+          <div id="contact_subject">
+            <label for="subject">Message Title:</label>
+            <input
+              name="subject"
+              title="Subject"
+              placeholder="Enter a subject for the message"
+            />
+          </div>
+          <div id="contact_message">
+            <label for="message">Message:</label>
+            <textarea name="message" rows="16"></textarea>
+          </div>
+          <input
+            type="submit"
+            value="Send"
+            title="Send Message"
+            id="contact_submit"
+          />
+        </form>
+      </section>
     </main>
-    <section id="projects">Projects</section>
-    <footer id="contact">Footer: Contact Me</footer>
+    <footer>
+      <menu>
+        <li>
+          <a href="mailto:melvinoosei@gmail.com" target="_blank"
+            ><img src="" alt="Email" title="Email" height="auto" width="32"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/m0ofasa/" target="_blank"
+            ><img
+              src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png"
+              alt="Instagram"
+              title="Instagram"
+              height="32"
+              width="auto"
+          /></a>
+        </li>
+      </menu>
+    </footer>
   </body>
 </html>

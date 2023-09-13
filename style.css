@@ -1,5 +1,5 @@
 /* Imports */
-@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik&display=swap");
 
 /* Colour styles */
 :root {
@@ -12,51 +12,392 @@
 
 /* Whole Document */
 * {
-  font-family: "Inter", sans-serif;
-  color: white;
-  /* display: flex; */
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
 }
 body {
-  margin: 0;
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  color: white;
+  background-color: var(--greyblue);
 }
+
+/* Conditions */
 ::selection {
   background-color: var(--mustard);
   color: black;
 }
-
-/* Elements */
-header {
-  background-color: var(--paynegrey);
+a:hover > img {
+  filter: invert(100%);
 }
+
+/* Class */
+.container {
+  min-height: 84vh;
+  padding: 32px 8vw;
+  /* padding-top: 64px; */
+  scroll-margin-top: 32px;
+}
+.circle {
+  border-radius: 100%;
+  overflow: hidden;
+}
+
+/* Headings */
+h1,
+h2,
+h3 {
+  font-family: "Inter", sans-serif;
+}
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-bottom: 8px;
+}
+h3 {
+  font-size: 24px;
+  /* font-weight: normal; */
+  margin-bottom: 8px;
+  margin-top: 16px;
+}
+
+/* Header */
+header {
+  font-family: "Inter", sans-serif;
+  background-color: var(--paynegrey);
+  padding: 32px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  user-select: none;
+}
+#logo_white {
+  /* float: left; */
+  min-height: 84px;
+  filter: invert(100%);
+  order: -1;
+}
+hgroup h1 {
+  font-size: 52px;
+  font-weight: bold;
+}
+hgroup h2 {
+  font-size: 32px;
+  font-weight: normal;
+}
+
+/* Navigation */
 nav {
+  position: sticky;
+  top: 0;
   background-color: var(--mustard);
-  color: black;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1;
+}
+nav menu {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  list-style-type: none;
 }
 nav a {
   text-decoration: none;
   color: black;
+  padding: 8px;
+  min-height: 32px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  /* margin-left: 8px; */
 }
-main {
-  background-color: var(--cadetgrey);
+#logo {
+  height: 32px;
 }
-section {
+nav ::selection {
   background-color: var(--greyblue);
-}
-footer {
-  background-color: var(--bittersweet);
-}
-
-/* Conditions */
-nav > ::selection {
-  background-color: var(--bittersweet);
   color: white;
 }
-a:hover {
-  background-color: var(--greyblue);
+nav a:hover {
+  color: white;
+  background-color: var(--bittersweet);
 }
 
-/* Class */
-.flex {
-  display: flex;
-  padding: 16px;
+/* About */
+#about {
+  background-color: var(--cadetgrey);
 }
+#about h2 {
+  font-size: 52px;
+}
+#photo_Melvin_container {
+  float: right;
+  position: relative;
+  max-height: 256px;
+  max-width: 256px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 16px 16px;
+}
+#photo_Melvin {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+#photo_Melvin_container figcaption {
+  color: white;
+  position: absolute;
+  text-align: center;
+  /* white-space: nowrap; */
+  background-color: rgba(0, 0, 0, 0.4);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 100%;
+  transition: calc(1s / 3) ease-in;
+}
+#photo_Melvin_container:hover figcaption {
+  transition: calc(1s / 3) ease-out;
+  top: 0;
+}
+#photo_Melvin_container:active figcaption {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+#about h2 {
+  font-weight: normal;
+}
+#about p {
+  text-align: justify;
+}
+#skills ul {
+  display: flex;
+  /* list-style: none; */
+  flex-wrap: wrap;
+  overflow: hidden;
+  column-gap: 32px;
+}
+
+/* Contact */
+#contact {
+  background-color: var(--greyblue);
+  color: black;
+}
+#contact form {
+  display: grid;
+  grid-template: auto / repeat(3, 1fr);
+  gap: 8px 32px;
+}
+form input,
+form textarea {
+  font-family: "Rubik", sans-serif;
+  font-size: 20px;
+  border: none;
+  border-bottom: solid 2px;
+  padding: 4px;
+}
+form input:focus + label {
+  transition: 1s;
+  /* color: var(--mustard); */
+}
+#contact div {
+  display: flex;
+  flex-direction: column;
+}
+form label {
+  font-size: 16px;
+  font-weight: bold;
+}
+#contact_name {
+  grid-column: span 1;
+}
+#contact_subject {
+  grid-column: span 2;
+}
+#contact_message {
+  grid-column: span 3;
+}
+#contact textarea {
+  resize: vertical;
+  min-height: 24px;
+}
+#contact_submit {
+  grid-column: 1 / -1;
+  justify-self: center;
+  width: 256px;
+  background-color: var(--paynegrey);
+  color: white;
+  border-radius: 32px;
+}
+#contact_submit:hover {
+  background-color: var(--cadetgrey);
+  color: white;
+}
+#contact_submit:active {
+  background-color: var(--mustard);
+  color: black;
+}
+
+/* Projects */
+#projects {
+  /* background-color: var(--cadetgrey); */
+  background-image: linear-gradient(var(--cadetgrey), var(--greyblue));
+  /* display: grid; */
+  /* grid-area: auto; */
+  /* flex-direction: column; */
+}
+#projects ul {
+  /* display: flex; */
+  flex-wrap: wrap;
+  gap: 32px;
+}
+#projects li {
+  border-radius: calc(100% / 8) /*32px*/;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+  list-style: none;
+  transition: ease-in calc(1s / 12);
+}
+#projects li:hover {
+  box-shadow: 8px 8px 20px 8px rgba(255, 255, 255, 0.4);
+  transition: ease-out calc(1s / 6);
+  position: relative;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+#photo_Melvin {
+  display: block;
+  height: auto;
+  max-width: 100%;
+}
+#projects figcaption {
+  color: black;
+  position: relative;
+  text-align: center;
+  /* white-space: nowrap; */
+  background-color: var(--mustard);
+  max-height: 50%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  padding: 8px;
+  bottom: -100%;
+  transition: calc(1s / 3) ease-in;
+}
+#projects li:hover figcaption {
+  transition: calc(1s / 3) ease-out;
+  bottom: 0;
+}
+#projects li:active figcaption {
+  background-color: rgba(255, 255, 0, 0.4);
+}
+
+/* Footer */
+footer {
+  background-color: var(--bittersweet);
+  z-index: 1;
+  user-select: none;
+}
+footer menu {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  list-style-type: none;
+  min-height: 52px;
+}
+footer a {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+}
+footer img {
+  height: 32px;
+  width: auto;
+  filter: invert(100%);
+}
+footer a:hover img {
+  filter: invert(0%);
+}
+
+/* Notes */
+
+/* Selector
+*  (all)
+.class
+.class1.class2 = has both class1 and class2
+.class1 .class2 = has class2 descending from class1
+#id
+element
+element.class = element with class
+element1,element2 = all element1 and all element2
+element1 element2 = all element2 from element1
+element1>element2 = all element2 descending from element1
+element1+element2 = first element2 child of element1
+element1~element2 = all element2 that has been preceded by element1
+[attribute]
+[attribute=value]
+*/
+
+/* Units
+cm = centimeters
+mm = milimeters (10mm = 1cm)
+in = inches (1in = 2.54cm)
+px = pixels (96px = 1in)
+pt = points (72pt = 1in)
+pc = picas (1pc = 12pt)
+em = times the font size
+rem = times the font size of the root element
+ex = times the x-height (rarely used)
+ch = times the width of 0
+% = % of parent element
+vw = % of viewport width
+vh = % of viewport height
+vmin = % of viewport's smallest dimension (between w and h)
+vmax = % of viewport's largest dimension (between w and h)
+*/
+
+/* Functions
+calc(CALCULATION i.e. 100px / 2)
+*/
+
+/* margin/border/padding: 
+4 values: top right bottom left
+3 values: top right-left bottom
+2 values: top-bottom right-left
+1 value: all
+*/
+
+/* display:grid
+grid-template: grid-template-rows / grid-template-columns
+grid-template-rows: UNIT | % | repeat(INT, UNIT|%) | fr for fraction
+grid-template-columns: UNIT | % | repeat(INT, UNIT|%) | fr for fraction
+-
+grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
+grid-row: grid-row-start / grid-row-end;
+grid-row-start: INT | span INT
+grid-row-end: INT | span INT
+grid-column: grid-column-start / grid-column-end;
+grid-column-start: INT | span INT
+grid-column-end: INT | span INT
+-
+order: INT 
+*/
+
+/* display: flex
+flex-flow: flex-direction flex-wrap
+flex-direction: row* | row-reverse | column | column-reverse
+flex-wrap: nowrap* | wrap | wrap-reverse
+justify-content   (in flex-direction):  flex-start* | flex-end | center | space-between | space-around | space-evenly
+align-items (90deg to flex-direction):  flex-start  | flex-end | center | baseline | stretch*
+align-content (spacing):                flex-start  | flex-end | center | space-between | space-around | space-evenly | stretch*
+-
+align-self  (90deg to flex-direction):  flex-start  | flex-end | center | baseline | stretch*
+order: INT 
+*/
