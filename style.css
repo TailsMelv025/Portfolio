@@ -88,6 +88,10 @@ hgroup h2 {
   font-size: 32px;
   font-weight: normal;
 }
+a img {
+  height: 32px;
+  width: auto;
+}
 
 /* Navigation */
 nav {
@@ -113,9 +117,6 @@ nav a {
   display: flex;
   align-items: center;
   /* margin-left: 8px; */
-}
-#logo {
-  height: 32px;
 }
 nav ::selection {
   background-color: var(--greyblue);
