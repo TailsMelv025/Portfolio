@@ -248,56 +248,75 @@ form label {
 #projects {
   /* background-color: var(--cadetgrey); */
   background-image: linear-gradient(var(--cadetgrey), var(--greyblue));
-  /* display: grid; */
-  /* grid-area: auto; */
-  /* flex-direction: column; */
 }
-#projects ul {
-  /* display: flex; */
+#projects menu {
+  display: flex;
   flex-wrap: wrap;
   gap: 32px;
-}
-#projects li {
-  border-radius: calc(100% / 8) /*32px*/;
-  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
   list-style: none;
+  /* justify-content: space-between; */
+}
+#projects menu li {
+  height: 256px;
+  width: 256px;
+  border-radius: 32px;
+  /* border: solid 8px var(--paynegrey); */
+  overflow: hidden;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
   transition: ease-in calc(1s / 12);
 }
-#projects li:hover {
+#projects menu li:hover {
   box-shadow: 8px 8px 20px 8px rgba(255, 255, 255, 0.4);
   transition: ease-out calc(1s / 6);
   position: relative;
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
 }
-#photo_Melvin {
-  display: block;
-  height: auto;
-  max-width: 100%;
+#projects menu a {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100%;
+  width: 100%;
 }
-#projects figcaption {
-  color: black;
+#projects menu figure {
   position: relative;
-  text-align: center;
-  /* white-space: nowrap; */
-  background-color: var(--mustard);
-  max-height: 50%;
+  height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: baseline;
+}
+#projects menu iframe {
+  display: block;
+  min-width: 100%;
+  min-height: 100%;
+  object-fit: cover;
+  border: none;
+}
+#projects menu figcaption {
+  color: black;
+  font-size: 16px;
+  position: absolute;
+  text-align: center;
+  /* white-space: nowrap; */
+  background-color: var(--mustard);
+  height: 96px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
   flex-wrap: wrap;
-  padding: 8px;
-  bottom: -100%;
+  padding: 16px;
+  box-sizing: border-box;
+  bottom: -108px;
   transition: calc(1s / 3) ease-in;
 }
-#projects li:hover figcaption {
+#projects menu a:hover figcaption {
   transition: calc(1s / 3) ease-out;
   bottom: 0;
 }
-#projects li:active figcaption {
-  background-color: rgba(255, 255, 0, 0.4);
+#projects menu a:active figcaption {
+  background-color: var(--bittersweet);
+  color: white;
 }
 
 /* Footer */
