@@ -250,11 +250,13 @@ form label {
   background-image: linear-gradient(var(--cadetgrey), var(--greyblue));
 }
 #projects menu {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
   gap: 32px;
+  max-width: calc(100vw - 16vw);
+  margin: auto;
   list-style: none;
-  /* justify-content: space-between; */
+  justify-items: center;
 }
 #projects menu li {
   height: 256px;
