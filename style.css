@@ -1,7 +1,7 @@
 /* Imports */
 @import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik&display=swap");
 
-/* Colour styles */
+/* Variables */
 :root {
   --mustard: #ffdb58;
   --greyblue: #b8d8d8;
@@ -100,7 +100,7 @@ nav {
   background-color: var(--mustard);
   display: flex;
   justify-content: space-between;
-  z-index: 1;
+  z-index: 9;
 }
 nav menu {
   display: flex;
@@ -111,9 +111,9 @@ nav menu {
 nav a {
   text-decoration: none;
   color: black;
+  font-weight: bold;
   padding: 8px;
   min-height: 32px;
-  font-weight: bold;
   display: flex;
   align-items: center;
   /* margin-left: 8px; */
@@ -123,8 +123,8 @@ nav ::selection {
   color: white;
 }
 nav a:hover {
-  color: white;
   background-color: var(--bittersweet);
+  color: white;
 }
 
 /* About */
@@ -150,11 +150,11 @@ nav a:hover {
   max-width: 100%;
 }
 #photo_Melvin_container figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
   color: white;
   position: absolute;
   text-align: center;
   /* white-space: nowrap; */
-  background-color: rgba(0, 0, 0, 0.4);
   height: 100%;
   width: 100%;
   display: flex;
@@ -201,6 +201,7 @@ form textarea {
   border: none;
   border-bottom: solid 2px;
   padding: 4px;
+  z-index: 1;
 }
 form input:focus + label {
   transition: 1s;
@@ -213,6 +214,19 @@ form input:focus + label {
 form label {
   font-size: 16px;
   font-weight: bold;
+  transform: translateY(2em);
+  opacity: 0;
+  animation: peer-in 1s ease 1s both;
+}
+@keyframes peer-in {
+  0% {
+    transform: translateY(2em);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 #contact_name {
   grid-column: span 1;
@@ -251,7 +265,7 @@ form label {
 }
 #projects menu {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
   gap: 32px;
   max-width: calc(100vw - 16vw);
   margin: auto;

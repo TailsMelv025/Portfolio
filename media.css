@@ -1,0 +1,516 @@
+/* Imports */
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Rubik&display=swap");
+
+/* Variables */
+:root {
+  --mustard: #ffdb58;
+  --greyblue: #b8d8d8;
+  --cadetgrey: #7a9e9f;
+  --paynegrey: #4f6367;
+  --bittersweet: #fe5f55;
+}
+
+@media screen and (max-width: 600px) {
+  /* Whole Document */
+  body {
+    font-size: 16px;
+  }
+
+  /* Class */
+  .container {
+    padding: 32px 4vw;
+    /* padding-top: 64px; */
+    scroll-margin-top: 32px;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+  /* Header */
+  header {
+    padding: 32px;
+    display: flex;
+    gap: 16px;
+  }
+  #logo_white {
+    height: calc(8vw + 4vw);
+  }
+  hgroup h1 {
+    font-size: 8vw;
+  }
+  hgroup h2 {
+    font-size: 4vw;
+  }
+  a img {
+    height: 32px;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+  }
+  nav menu {
+    display: flex;
+    gap: 8px;
+  }
+  nav a {
+    padding: 8px;
+    min-height: 32px;
+    display: flex;
+    /* margin-left: 8px; */
+  }
+
+  /* About */
+  #about h2 {
+    font-size: 48px;
+  }
+  #photo_Melvin_container {
+    position: relative;
+    max-height: 50%;
+    max-width: 50%;
+    display: flex;
+    margin: 0 0 8px 8px;
+  }
+  #photo_Melvin_container figcaption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  #skills ul {
+    display: flex;
+    column-gap: 32px;
+  }
+
+  /* Contact */
+  #contact form {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 8px 32px;
+  }
+  form input,
+  form textarea {
+    font-size: 20px;
+    border-bottom: solid 2px;
+    padding: 4px;
+  }
+  form label {
+    font-size: 16px;
+    transform: translateY(2em);
+    opacity: 0;
+    animation: peer-in 1s ease 1s both;
+  }
+  @keyframes peer-in {
+    0% {
+      transform: translateY(2em);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  #contact_name {
+    grid-column: span 1;
+  }
+  #contact_subject {
+    grid-column: span 2;
+  }
+  #contact_message {
+    grid-column: span 3;
+  }
+  #contact textarea {
+    resize: vertical;
+    min-height: 24px;
+  }
+  #contact_submit {
+    grid-column: 1 / -1;
+    width: 256px;
+    border-radius: 32px;
+  }
+
+  /* Projects */
+  #projects menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 32px;
+    max-width: calc(100vw - 16vw);
+    margin: auto;
+    list-style: none;
+    justify-items: center;
+  }
+  #projects menu li {
+    height: 256px;
+    width: 256px;
+    border-radius: 32px;
+    /* border: solid 8px var(--paynegrey); */
+    overflow: hidden;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    transition: ease-in calc(1s / 12);
+  }
+  #projects menu li:hover {
+    box-shadow: 8px 8px 20px 8px rgba(255, 255, 255, 0.4);
+    transition: ease-out calc(1s / 6);
+    position: relative;
+  }
+  #projects menu a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+  #projects menu figure {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  #projects menu iframe {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+  #projects menu figcaption {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    /* white-space: nowrap; */
+    background-color: var(--mustard);
+    height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 16px;
+    box-sizing: border-box;
+    bottom: -108px;
+    transition: calc(1s / 3) ease-in;
+  }
+  #projects menu a:hover figcaption {
+    transition: calc(1s / 3) ease-out;
+    bottom: 0;
+  }
+  #projects menu a:active figcaption {
+    background-color: var(--bittersweet);
+    color: white;
+  }
+
+  /* Footer */
+  footer menu {
+    display: flex;
+    min-height: 52px;
+  }
+  footer a {
+    padding: 16px;
+    display: flex;
+  }
+  footer img {
+    height: 32px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  /* Whole Document */
+  body {
+    font-size: 20px;
+  }
+
+  /* Class */
+  .container {
+    min-height: 84vh;
+    padding: 32px 8vw;
+    /* padding-top: 64px; */
+    scroll-margin-top: 32px;
+  }
+
+  /* Headings */
+  h2 {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+  h3 {
+    font-size: 24px;
+    margin-bottom: 8px;
+    margin-top: 16px;
+  }
+
+  /* Header */
+  header {
+    padding: 32px;
+    display: flex;
+    gap: 16px;
+  }
+  #logo_white {
+    min-height: 84px;
+  }
+  hgroup h1 {
+    font-size: 52px;
+  }
+  hgroup h2 {
+    font-size: 32px;
+  }
+  a img {
+    height: 32px;
+  }
+
+  /* Navigation */
+  nav {
+    display: flex;
+  }
+  nav menu {
+    display: flex;
+    gap: 16px;
+  }
+  nav a {
+    padding: 8px;
+    min-height: 32px;
+    display: flex;
+    /* margin-left: 8px; */
+  }
+
+  /* About */
+  #about h2 {
+    font-size: 52px;
+  }
+  #photo_Melvin_container {
+    position: relative;
+    max-height: 256px;
+    max-width: 256px;
+    display: flex;
+    margin: 0 0 16px 16px;
+  }
+  #photo_Melvin_container figcaption {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+  }
+  #skills ul {
+    display: flex;
+    column-gap: 32px;
+  }
+
+  /* Contact */
+  #contact form {
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    gap: 8px 32px;
+  }
+  form input,
+  form textarea {
+    font-size: 20px;
+    border-bottom: solid 2px;
+    padding: 4px;
+  }
+  form label {
+    font-size: 16px;
+    transform: translateY(2em);
+    opacity: 0;
+    animation: peer-in 1s ease 1s both;
+  }
+  @keyframes peer-in {
+    0% {
+      transform: translateY(2em);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  #contact_name {
+    grid-column: span 1;
+  }
+  #contact_subject {
+    grid-column: span 2;
+  }
+  #contact_message {
+    grid-column: span 3;
+  }
+  #contact textarea {
+    resize: vertical;
+    min-height: 24px;
+  }
+  #contact_submit {
+    grid-column: 1 / -1;
+    width: 256px;
+    border-radius: 32px;
+  }
+
+  /* Projects */
+  #projects menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(256px, 1fr));
+    gap: 32px;
+    max-width: calc(100vw - 16vw);
+    margin: auto;
+    list-style: none;
+    justify-items: center;
+  }
+  #projects menu li {
+    height: 256px;
+    width: 256px;
+    border-radius: 32px;
+    /* border: solid 8px var(--paynegrey); */
+    overflow: hidden;
+    box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
+    transition: ease-in calc(1s / 12);
+  }
+  #projects menu li:hover {
+    box-shadow: 8px 8px 20px 8px rgba(255, 255, 255, 0.4);
+    transition: ease-out calc(1s / 6);
+    position: relative;
+  }
+  #projects menu a {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    height: 100%;
+    width: 100%;
+  }
+  #projects menu figure {
+    position: relative;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+  }
+  #projects menu iframe {
+    display: block;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    border: none;
+  }
+  #projects menu figcaption {
+    color: black;
+    font-size: 16px;
+    position: absolute;
+    text-align: center;
+    /* white-space: nowrap; */
+    background-color: var(--mustard);
+    height: 96px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    padding: 16px;
+    box-sizing: border-box;
+    bottom: -108px;
+    transition: calc(1s / 3) ease-in;
+  }
+  #projects menu a:hover figcaption {
+    transition: calc(1s / 3) ease-out;
+    bottom: 0;
+  }
+  #projects menu a:active figcaption {
+    background-color: var(--bittersweet);
+    color: white;
+  }
+
+  /* Footer */
+  footer menu {
+    display: flex;
+    min-height: 52px;
+  }
+  footer a {
+    padding: 16px;
+    display: flex;
+  }
+  footer img {
+    height: 32px;
+  }
+}
+
+/* Notes */
+
+/* Selector
+*  (all)
+.class
+.class1.class2 = has both class1 and class2
+.class1 .class2 = has class2 descending from class1
+#id
+element
+element.class = element with class
+element1,element2 = all element1 and all element2
+element1 element2 = all element2 from element1
+element1>element2 = all element2 descending from element1
+element1+element2 = first element2 child of element1
+element1~element2 = all element2 that has been preceded by element1
+[attribute]
+[attribute=value]
+*/
+
+/* Units
+cm = centimeters
+mm = milimeters (10mm = 1cm)
+in = inches (1in = 2.54cm)
+px = pixels (96px = 1in)
+pt = points (72pt = 1in)
+pc = picas (1pc = 12pt)
+em = times the font size
+rem = times the font size of the root element
+ex = times the x-height (rarely used)
+ch = times the width of 0
+% = % of parent element
+vw = % of viewport width
+vh = % of viewport height
+vmin = % of viewport's smallest dimension (between w and h)
+vmax = % of viewport's largest dimension (between w and h)
+*/
+
+/* Functions
+calc(CALCULATION i.e. 100px / 2)
+*/
+
+/* margin/border/padding: 
+4 values: top right bottom left
+3 values: top right-left bottom
+2 values: top-bottom right-left
+1 value: all
+*/
+
+/* display:grid
+grid-template: grid-template-rows / grid-template-columns
+grid-template-rows: UNIT | % | repeat(INT, UNIT|%) | fr for fraction
+grid-template-columns: UNIT | % | repeat(INT, UNIT|%) | fr for fraction
+-
+grid-area: grid-row-start / grid-column-start / grid-row-end / grid-column-end;
+grid-row: grid-row-start / grid-row-end;
+grid-row-start: INT | span INT
+grid-row-end: INT | span INT
+grid-column: grid-column-start / grid-column-end;
+grid-column-start: INT | span INT
+grid-column-end: INT | span INT
+-
+order: INT 
+*/
+
+/* display: flex
+flex-flow: flex-direction flex-wrap
+flex-direction: row* | row-reverse | column | column-reverse
+flex-wrap: nowrap* | wrap | wrap-reverse
+justify-content   (in flex-direction):  flex-start* | flex-end | center | space-between | space-around | space-evenly
+align-items (90deg to flex-direction):  flex-start  | flex-end | center | baseline | stretch*
+align-content (spacing):                flex-start  | flex-end | center | space-between | space-around | space-evenly | stretch*
+-
+align-self  (90deg to flex-direction):  flex-start  | flex-end | center | baseline | stretch*
+order: INT 
+*/
