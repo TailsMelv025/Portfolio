@@ -4,10 +4,10 @@
 /* Variables */
 :root {
   --mustard: #ffdb58;
-  --greyblue: #b8d8d8;
-  --cadetgrey: #7a9e9f;
-  --paynegrey: #4f6367;
-  --bittersweet: #fe5f55;
+  --cadetgrey: #91a3b0;
+  --slategrey: #708090;
+  --charcoal: #536878;
+  --bittersweet: #fe6f5e;
 }
 
 @media screen and (max-width: 600px) {
@@ -50,7 +50,7 @@
     font-size: 4vw;
   }
   a img {
-    height: 32px;
+    height: 24px;
   }
 
   /* Navigation */
@@ -62,8 +62,8 @@
     gap: 8px;
   }
   nav a {
-    padding: 8px;
-    min-height: 32px;
+    padding: 12px;
+    min-height: 24px;
     display: flex;
     /* margin-left: 8px; */
   }
@@ -151,7 +151,7 @@
     height: 256px;
     width: 256px;
     border-radius: 32px;
-    /* border: solid 8px var(--paynegrey); */
+    /* border: solid 8px var(--charcoal); */
     overflow: hidden;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
     transition: ease-in calc(1s / 12);
@@ -289,8 +289,8 @@
   }
   #photo_Melvin_container {
     position: relative;
-    max-height: 256px;
-    max-width: 256px;
+    max-height: 192px;
+    max-width: 192px;
     display: flex;
     margin: 0 0 16px 16px;
   }
@@ -366,7 +366,7 @@
     height: 256px;
     width: 256px;
     border-radius: 32px;
-    /* border: solid 8px var(--paynegrey); */
+    /* border: solid 8px var(--charcoal); */
     overflow: hidden;
     box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
     transition: ease-in calc(1s / 12);

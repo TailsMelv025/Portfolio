@@ -4,10 +4,10 @@
 /* Variables */
 :root {
   --mustard: #ffdb58;
-  --greyblue: #b8d8d8;
-  --cadetgrey: #7a9e9f;
-  --paynegrey: #4f6367;
-  --bittersweet: #fe5f55;
+  --cadetgrey: #91a3b0;
+  --slategrey: #708090;
+  --charcoal: #36454f;
+  --bittersweet: #fe6f5e;
 }
 
 /* Whole Document */
@@ -20,9 +20,10 @@ html {
 }
 body {
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
+  font-size: calc(5rem / 4);
   color: white;
-  background-color: var(--greyblue);
+  background-color: var(--cadetgrey);
+  overflow-x: hidden;
 }
 
 /* Conditions */
@@ -37,7 +38,7 @@ a:hover > img {
 /* Class */
 .container {
   min-height: 84vh;
-  padding: 32px 8vw;
+  padding: 2em 8vw;
   /* padding-top: 64px; */
   scroll-margin-top: 32px;
 }
@@ -53,12 +54,12 @@ h3 {
   font-family: "Inter", sans-serif;
 }
 h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: normal;
   margin-bottom: 8px;
 }
 h3 {
-  font-size: 24px;
+  font-size: calc(3rem / 2);
   /* font-weight: normal; */
   margin-bottom: 8px;
   margin-top: 16px;
@@ -67,11 +68,11 @@ h3 {
 /* Header */
 header {
   font-family: "Inter", sans-serif;
-  background-color: var(--paynegrey);
-  padding: 32px;
+  background-color: var(--charcoal);
+  padding: 2em;
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 1em;
   user-select: none;
 }
 #logo_white {
@@ -81,11 +82,11 @@ header {
   order: -1;
 }
 hgroup h1 {
-  font-size: 52px;
+  font-size: calc(13rem / 4);
   font-weight: bold;
 }
 hgroup h2 {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: normal;
 }
 a img {
@@ -100,11 +101,12 @@ nav {
   background-color: var(--mustard);
   display: flex;
   justify-content: space-between;
+  height: 48px;
   z-index: 9;
 }
 nav menu {
   display: flex;
-  gap: 16px;
+  gap: 8px;
   align-items: center;
   list-style-type: none;
 }
@@ -112,14 +114,14 @@ nav a {
   text-decoration: none;
   color: black;
   font-weight: bold;
-  padding: 8px;
-  min-height: 32px;
+  padding: 0.5em;
+  /* min-height: 32px; */
   display: flex;
   align-items: center;
   /* margin-left: 8px; */
 }
 nav ::selection {
-  background-color: var(--greyblue);
+  background-color: var(--cadetgrey);
   color: white;
 }
 nav a:hover {
@@ -132,7 +134,7 @@ nav a:hover {
   background-color: var(--cadetgrey);
 }
 #about h2 {
-  font-size: 52px;
+  font-size: calc(13rem / 4);
 }
 #photo_Melvin_container {
   float: right;
@@ -186,8 +188,7 @@ nav a:hover {
 
 /* Contact */
 #contact {
-  background-color: var(--greyblue);
-  color: black;
+  background-color: var(--slategrey);
 }
 #contact form {
   display: grid;
@@ -197,10 +198,10 @@ nav a:hover {
 form input,
 form textarea {
   font-family: "Rubik", sans-serif;
-  font-size: 20px;
+  font-size: calc(5rem / 4);
   border: none;
   border-bottom: solid 2px;
-  padding: 4px;
+  padding: 0.2em;
   z-index: 1;
 }
 form input:focus + label {
@@ -212,7 +213,7 @@ form input:focus + label {
   flex-direction: column;
 }
 form label {
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: bold;
   transform: translateY(2em);
   opacity: 0;
@@ -245,7 +246,7 @@ form label {
   grid-column: 1 / -1;
   justify-self: center;
   width: 256px;
-  background-color: var(--paynegrey);
+  background-color: var(--charcoal);
   color: white;
   border-radius: 32px;
 }
@@ -260,8 +261,8 @@ form label {
 
 /* Projects */
 #projects {
-  /* background-color: var(--cadetgrey); */
-  background-image: linear-gradient(var(--cadetgrey), var(--greyblue));
+  /* background-color: var(--slategrey); */
+  background-image: linear-gradient(var(--slategrey), var(--cadetgrey));
 }
 #projects menu {
   display: grid;
@@ -276,7 +277,7 @@ form label {
   height: 256px;
   width: 256px;
   border-radius: 32px;
-  /* border: solid 8px var(--paynegrey); */
+  /* border: solid 8px var(--charcoal); */
   overflow: hidden;
   box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.4);
   transition: ease-in calc(1s / 12);
@@ -310,7 +311,7 @@ form label {
 }
 #projects menu figcaption {
   color: black;
-  font-size: 16px;
+  font-size: 1rem;
   position: absolute;
   text-align: center;
   /* white-space: nowrap; */
@@ -321,7 +322,7 @@ form label {
   justify-content: center;
   align-items: flex-start;
   flex-wrap: wrap;
-  padding: 16px;
+  padding: 1em;
   box-sizing: border-box;
   bottom: -108px;
   transition: calc(1s / 3) ease-in;
@@ -349,7 +350,7 @@ footer menu {
   min-height: 52px;
 }
 footer a {
-  padding: 16px;
+  padding: 1em;
   display: flex;
   align-items: center;
 }
