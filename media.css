@@ -251,9 +251,9 @@
 
   /* Header */
   header {
-    padding: 32px;
+    padding: 2em;
     display: flex;
-    gap: 16px;
+    gap: 1em;
   }
   #logo_white {
     min-height: 84px;
@@ -289,8 +289,8 @@
   }
   #photo_Melvin_container {
     position: relative;
-    max-height: 192px;
-    max-width: 192px;
+    /* max-height: 576px; */
+    /* max-width: 1576px; */
     display: flex;
     margin: 0 0 16px 16px;
   }

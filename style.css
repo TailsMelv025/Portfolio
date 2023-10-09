@@ -37,7 +37,7 @@ a:hover > img {
 
 /* Class */
 .container {
-  min-height: 84vh;
+  /* min-height: 84vh; */
   padding: 2em 8vw;
   /* padding-top: 64px; */
   scroll-margin-top: 32px;
@@ -55,7 +55,7 @@ h3 {
 }
 h2 {
   font-size: 2rem;
-  font-weight: normal;
+  /* font-weight: bold; */
   margin-bottom: 8px;
 }
 h3 {
@@ -185,6 +185,56 @@ nav a:hover {
   overflow: hidden;
   column-gap: 32px;
 }
+#qualifications li {
+  /* margin-bottom: 10px; */
+}
+.timeline {
+  display: grid;
+  grid-template-columns: 1fr 1em 1fr;
+  /* border: solid; */
+  gap: 10px;
+}
+.right-align {
+  text-align: right;
+}
+.line {
+  /* content: ""; */
+  width: 4px;
+  background-color: white;
+  position: relative;
+  justify-self: center;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+}
+.line-point {
+  content: "";
+  position: relative;
+  justify-self: center;
+  width: 16px;
+  height: 16px;
+  background-color: white;
+  border-radius: 50%;
+  border: solid;
+}
+.study-level {
+  font-weight: 900;
+}
+.study-field {
+  font-weight: 700;
+}
+.institution {
+  font-weight: 500;
+}
+.duration {
+  font-weight: 300;
+  font-variant: small-caps;
+}
+.thinweight {
+  font-weight: 100;
+}
 
 /* Contact */
 #contact {
@@ -214,7 +264,7 @@ form input:focus + label {
 }
 form label {
   font-size: 1rem;
-  font-weight: bold;
+  /* font-weight: bold; */
   transform: translateY(2em);
   opacity: 0;
   animation: peer-in 1s ease 1s both;
